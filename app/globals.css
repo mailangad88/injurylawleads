@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+.prose :where(h2) {
+  scroll-margin-top: 5rem;
+}

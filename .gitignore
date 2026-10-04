@@ -1,0 +1,17 @@
+node_modules/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Lead data must never be committed (this repo is public)
+data/
+*.ndjson
+
+.DS_Store
+.vercel
