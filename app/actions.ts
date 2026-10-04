@@ -77,6 +77,7 @@ export async function submitLead(_prev: LeadFormState, formData: FormData): Prom
       pageUrl: str(formData.get("pageUrl")).slice(0, 500) || null,
       referrer: str(formData.get("referrer")).slice(0, 500) || null,
       utm,
+      context: str(formData.get("context")).slice(0, 500) || null,
     },
   };
 

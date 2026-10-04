@@ -64,5 +64,6 @@ export type Lead = LeadInput & {
     pageUrl: string | null;
     referrer: string | null;
     utm: Record<string, string>;
+    context: string | null;
   };
 };

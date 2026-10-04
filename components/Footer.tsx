@@ -21,6 +21,7 @@ export function Footer() {
         <div>
           <p className="text-sm font-semibold text-slate-900">Company</p>
           <ul className="mt-3 space-y-2 text-sm text-slate-600">
+            <li><Link href="/settlement-calculator" className="hover:text-blue-800">Settlement calculator</Link></li>
             <li><Link href="/how-it-works" className="hover:text-blue-800">How it works</Link></li>
             <li><Link href="/partners" className="hover:text-blue-800">Participating law firms</Link></li>
             <li><Link href="/disclaimer" className="hover:text-blue-800">Disclaimer</Link></li>
