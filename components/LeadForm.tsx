@@ -76,16 +76,16 @@ export function LeadForm({ consentText, defaultIncidentType = "", defaultState =
     <form
       ref={formRef}
       action={action}
-      className={`rounded-2xl border border-slate-200 bg-white shadow-lg ${compact ? "p-5" : "p-6 md:p-8"}`}
+      className={`rounded-2xl border border-slate-200 bg-white text-slate-900 shadow-lg ${compact ? "p-5" : "p-6 md:p-8"}`}
       noValidate={step === 1}
     >
       <div className="mb-4">
-        <p className="text-xs font-semibold uppercase tracking-wide text-blue-800">Free case review · Step {step} of 2</p>
+        <p className="text-xs font-black uppercase tracking-wide text-amber-700">Free case review · Step {step} of 2</p>
         <h2 className={`${compact ? "text-xl" : "text-2xl"} mt-1 font-bold text-slate-900`}>
           {heading ?? (step === 1 ? "See if you may have a case" : "Where can we reach you?")}
         </h2>
         <div className="mt-3 h-1.5 w-full rounded-full bg-slate-100">
-          <div className="h-1.5 rounded-full bg-amber-500 transition-all" style={{ width: step === 1 ? "50%" : "100%" }} />
+          <div className="h-1.5 rounded-full bg-yellow-400 transition-all" style={{ width: step === 1 ? "50%" : "100%" }} />
         </div>
       </div>
 
@@ -156,7 +156,7 @@ export function LeadForm({ consentText, defaultIncidentType = "", defaultState =
           {err("hasAttorney")}
         </fieldset>
         {stepError && <p className="text-sm text-red-700">{stepError}</p>}
-        <button type="button" onClick={next} className="w-full rounded-lg bg-amber-500 px-5 py-3.5 text-lg font-bold text-slate-900 shadow hover:bg-amber-400">
+        <button type="button" onClick={next} className="w-full rounded-lg bg-yellow-400 px-5 py-3.5 text-lg font-black uppercase tracking-wide text-slate-900 shadow hover:bg-yellow-300">
           Continue
         </button>
         <p className="text-center text-xs text-slate-500">Takes about 60 seconds. No cost, no obligation.</p>
@@ -201,7 +201,7 @@ export function LeadForm({ consentText, defaultIncidentType = "", defaultState =
         {state.status === "error" && state.message && (
           <p role="alert" className="rounded-lg bg-red-50 p-3 text-sm text-red-800">{state.message}</p>
         )}
-        <button type="submit" disabled={pending} className="w-full rounded-lg bg-amber-500 px-5 py-3.5 text-lg font-bold text-slate-900 shadow hover:bg-amber-400 disabled:opacity-60">
+        <button type="submit" disabled={pending} className="w-full rounded-lg bg-yellow-400 px-5 py-3.5 text-lg font-black uppercase tracking-wide text-slate-900 shadow hover:bg-yellow-300 disabled:opacity-60">
           {pending ? "Sending..." : "Get my free case review"}
         </button>
         <button type="button" onClick={() => setStep(1)} className="w-full text-sm text-slate-500 underline">

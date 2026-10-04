@@ -2,8 +2,19 @@
 // on /videos, can be embedded in any guide with <ExplainerVideo slug="..." />,
 // and can be rendered to MP4 with `npm run video:render`.
 // Keep the claims general and accurate: these are attorney advertising too.
+// Optional backgrounds: set `background` on a video or on a single step (see Background).
 
-export type ExplainerStep = { heading: string; body: string };
+// An image or clip behind a scene, for example one made with an AI image or video
+// generator. Put the file in public/ (src: "media/crash-scene.mp4") or use a full URL.
+// Footage that depicts events or people is labeled "Dramatization" unless you set
+// dramatization: false (only for abstract or stock scenery that shows nothing that happened).
+export type Background = {
+  src: string;
+  kind?: "image" | "video";
+  dramatization?: boolean;
+};
+
+export type ExplainerStep = { heading: string; body: string; background?: Background };
 
 export type ExplainerProps = {
   title: string;
@@ -11,6 +22,8 @@ export type ExplainerProps = {
   steps: ExplainerStep[];
   cta: string;
   brand: string;
+  // Used behind the intro, the outro and any step without its own background.
+  background?: Background;
 };
 
 export type VideoEntry = {

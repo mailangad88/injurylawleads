@@ -22,7 +22,7 @@ export function ExplainerVideo({ slug, brand }: { slug: string; brand?: string }
         clickToPlay
         showPosterWhenUnplayed
         renderPoster={() => (
-          <div className="@container flex h-full w-full flex-col justify-center bg-blue-900 px-[6%] pb-[8%] text-white">
+          <div className="@container flex h-full w-full flex-col justify-center bg-slate-950 px-[6%] pb-[8%] text-white">
             <p className="text-[7cqw] font-extrabold leading-tight">{video.props.title}</p>
             <p className="mt-2 text-[3.5cqw] text-blue-200">{video.props.subtitle}</p>
           </div>

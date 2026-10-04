@@ -6,12 +6,12 @@ import { ExplainerVideo } from "./ExplainerVideo";
 
 export function CaseReviewCTA({ title, children }: { title?: string; children?: ReactNode }) {
   return (
-    <div className="not-prose my-8 rounded-2xl bg-blue-900 p-6 text-white">
+    <div className="not-prose my-8 rounded-2xl bg-slate-950 p-6 text-white">
       <p className="text-xl font-bold">{title ?? "Wondering if you have a case?"}</p>
       <p className="mt-2 text-blue-100">
         {children ?? "Answer a few quick questions. A participating injury lawyer can review your situation for free, and you only pay if they win."}
       </p>
-      <Link href="/free-case-review" className="mt-4 inline-block rounded-lg bg-amber-500 px-5 py-3 font-bold text-slate-900 hover:bg-amber-400">
+      <Link href="/free-case-review" className="mt-4 inline-block rounded-lg bg-yellow-400 px-5 py-3 font-bold text-slate-900 hover:bg-yellow-300">
         Start my free case review
       </Link>
     </div>
@@ -20,7 +20,7 @@ export function CaseReviewCTA({ title, children }: { title?: string; children?: 
 
 export function KeyTakeaways({ children }: { children: ReactNode }) {
   return (
-    <div className="my-6 rounded-xl border-l-4 border-amber-500 bg-amber-50 px-5 py-1">
+    <div className="my-6 rounded-xl border-l-4 border-yellow-400 bg-yellow-50 px-5 py-1">
       <p className="!mb-0 font-semibold text-slate-900">Key takeaways</p>
       {children}
     </div>

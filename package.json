@@ -9,7 +9,8 @@
     "typecheck": "next typegen && tsc --noEmit",
     "new-guide": "node scripts/new-guide.mjs",
     "video:studio": "remotion studio remotion/index.ts",
-    "video:render": "node scripts/render-videos.mjs"
+    "video:render": "node scripts/render-videos.mjs",
+    "check:copy": "node scripts/check-copy.mjs"
   },
   "engines": {
     "node": ">=20"

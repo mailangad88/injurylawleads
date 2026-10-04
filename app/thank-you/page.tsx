@@ -22,7 +22,7 @@ export default async function ThankYou(props: PageProps<"/thank-you">) {
         </p>
       )}
       {site.phone && (
-        <a href={telHref(site.phone)} className="mt-8 inline-block rounded-lg bg-amber-500 px-6 py-3 text-lg font-bold text-slate-900">
+        <a href={telHref(site.phone)} className="mt-8 inline-block rounded-lg bg-yellow-400 px-6 py-3 text-lg font-bold text-slate-900">
           Or call us now: {site.phone}
         </a>
       )}

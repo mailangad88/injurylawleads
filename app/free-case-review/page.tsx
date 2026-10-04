@@ -31,7 +31,7 @@ export default async function FreeCaseReview(props: PageProps<"/free-case-review
           </ul>
           {site.phone && (
             <p className="mt-8 text-slate-700">
-              Prefer to talk now? Call <a href={telHref(site.phone)} className="font-bold text-blue-900 underline">{site.phone}</a>.
+              Prefer to talk now? Call <a href={telHref(site.phone)} className="font-bold text-slate-950 underline">{site.phone}</a>.
             </p>
           )}
         </div>

@@ -45,19 +45,23 @@ Frontmatter is validated at build time (`lib/content.ts`):
 | `faqs` | Rendered on the page and emitted as FAQPage structured data. |
 | `reviewedBy` | Only set when a licensed attorney actually reviewed the page. |
 
+Before publishing, run `npm run check:copy`. It flags AI-sounding phrasing and risky advertising claims; the full rules are in [docs/CONTENT_STYLE.md](docs/CONTENT_STYLE.md).
+
+Use [OpenSEO](docs/openseo-self-hosting.md) (self-hosted) to pick topics by search volume and track rankings.
+
 Components you can use in any guide without importing: `<CaseReviewCTA />`, `<KeyTakeaways>`, `<Callout type="warning">`, `<ExplainerVideo slug="..." />`.
 
 Every page ships with canonical URLs, Article and Breadcrumb JSON-LD, a sitemap and robots.txt.
 
 ### Content rules (attorney advertising)
 
-- No fake testimonials, invented case results, or guaranteed outcomes.
-- Don't state specific legal deadlines or dollar amounts unless verified for that state and dated.
-- Keep the "not a law firm" disclaimer in the footer and on every video.
+See [docs/CONTENT_STYLE.md](docs/CONTENT_STYLE.md). In short: no fake testimonials, invented results or guarantees, no unverified state-specific deadlines or dollar amounts, and the "not a law firm" disclaimer stays in the footer and on every video.
 
 ## Videos (Remotion)
 
 Explainer videos are React components in `remotion/`, driven by the data in `remotion/videos.ts`. They play in the page through `@remotion/player`, so no video files are needed.
+
+Any video, or any single step, can take an image or clip as its background, for example one made with an AI generator such as [Open Generative AI](https://github.com/anil-matcha/open-generative-ai). Put the file in `public/media/` and set `background: { src: "media/crash.mp4" }` in `remotion/videos.ts`. Backgrounds are labeled "Dramatization" automatically; set `dramatization: false` only for scenery that depicts no real event or person.
 
 ```bash
 npm run video:studio   # preview and edit in Remotion Studio
@@ -84,4 +88,5 @@ This code is not legal advice. Have a lawyer review the business model and the p
 | `npm run build` / `npm start` | Production build / server |
 | `npm run typecheck` | Generate route types and run TypeScript |
 | `npm run new-guide` | Scaffold a guide |
+| `npm run check:copy` | Flag AI-sounding copy and risky ad claims |
 | `npm run video:studio` / `video:render` | Remotion Studio / render MP4s |
