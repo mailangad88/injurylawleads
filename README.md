@@ -26,6 +26,10 @@ Locally, leads are appended to `data/leads.ndjson` (gitignored). **This repo is 
 
 Serverless hosts have no persistent disk, so in production set `LEAD_STORE=webhook` and point `LEAD_WEBHOOK_URL` at a Zapier/Make/n8n hook, your CRM, or your own API. Configure at least one alert channel so nobody waits.
 
+## Settlement calculator
+
+`/settlement-calculator` shows an illustrative range using the multiplier method (medical costs and lost wages, plus medical costs × a severity multiplier, reduced by fault). The math lives in `lib/estimator.ts` and uses only what the visitor enters. Wrongful death and malpractice show no number. The visitor's inputs and range ride along with the lead (`tracking.context`) so intake sees them. Have counsel review the disclaimer wording before launch.
+
 ## The content engine
 
 Guides live in `content/guides/<category>/<slug>.mdx`. Categories are defined in `lib/categories.ts`; each one gets a hub page at `/guides/<category>` and an option on the lead form.
@@ -49,7 +53,7 @@ Before publishing, run `npm run check:copy`. It flags AI-sounding phrasing and r
 
 Use [OpenSEO](docs/openseo-self-hosting.md) (self-hosted) to pick topics by search volume and track rankings.
 
-Components you can use in any guide without importing: `<CaseReviewCTA />`, `<KeyTakeaways>`, `<Callout type="warning">`, `<ExplainerVideo slug="..." />`.
+Components you can use in any guide without importing: `<CaseReviewCTA />`, `<EstimatorCTA />`, `<KeyTakeaways>`, `<Callout type="warning">`, `<ExplainerVideo slug="..." />`.
 
 Every page ships with canonical URLs, Article and Breadcrumb JSON-LD, a sitemap and robots.txt.
 

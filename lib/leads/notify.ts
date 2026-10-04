@@ -19,6 +19,7 @@ function summaryLines(lead: Lead) {
     `What happened: ${type} in ${lead.state}, ${when.toLowerCase()}`,
     `Medical treatment: ${lead.medicalTreatment}. Already has a lawyer: ${lead.hasAttorney}`,
     lead.description ? `Details: ${lead.description}` : null,
+    lead.tracking.context ? `Context: ${lead.tracking.context}` : null,
     `Source: ${lead.tracking.pageUrl ?? "unknown"}`,
     `Lead ID: ${lead.id}`,
   ].filter(Boolean) as string[];

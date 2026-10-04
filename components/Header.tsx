@@ -10,6 +10,7 @@ export function Header() {
           {site.name}
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-semibold text-slate-300 md:flex">
+          <Link href="/settlement-calculator" className="hover:text-yellow-400">Settlement Calculator</Link>
           <Link href="/guides" className="hover:text-yellow-400">Injury Guides</Link>
           <Link href="/videos" className="hover:text-yellow-400">Videos</Link>
           <Link href="/how-it-works" className="hover:text-yellow-400">How It Works</Link>

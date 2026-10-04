@@ -18,6 +18,20 @@ export function CaseReviewCTA({ title, children }: { title?: string; children?: 
   );
 }
 
+export function EstimatorCTA() {
+  return (
+    <div className="not-prose my-8 flex flex-col gap-4 rounded-2xl border-2 border-yellow-400 bg-yellow-50 p-6 sm:flex-row sm:items-center sm:justify-between">
+      <div>
+        <p className="text-lg font-black text-slate-950">What could your claim be worth?</p>
+        <p className="mt-1 text-sm text-slate-700">Enter your bills and lost wages to see an illustrative range in under a minute.</p>
+      </div>
+      <Link href="/settlement-calculator" className="shrink-0 rounded-lg bg-slate-950 px-5 py-3 text-center font-black uppercase tracking-wide text-white hover:bg-slate-800">
+        Try the calculator
+      </Link>
+    </div>
+  );
+}
+
 export function KeyTakeaways({ children }: { children: ReactNode }) {
   return (
     <div className="my-6 rounded-xl border-l-4 border-yellow-400 bg-yellow-50 px-5 py-1">
@@ -34,6 +48,7 @@ export function Callout({ type = "info", children }: { type?: "info" | "warning"
 
 export const mdxComponents = {
   CaseReviewCTA,
+  EstimatorCTA,
   KeyTakeaways,
   Callout,
   ExplainerVideo,

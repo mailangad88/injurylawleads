@@ -16,6 +16,8 @@ type Props = {
   defaultState?: string;
   heading?: string;
   compact?: boolean;
+  // Extra notes for the intake team, such as the estimator inputs.
+  context?: string;
 };
 
 function readTracking() {
@@ -36,7 +38,7 @@ function readTracking() {
   }
 }
 
-export function LeadForm({ consentText, defaultIncidentType = "", defaultState = "", heading, compact }: Props) {
+export function LeadForm({ consentText, defaultIncidentType = "", defaultState = "", heading, compact, context = "" }: Props) {
   const [state, action, pending] = useActionState<LeadFormState, FormData>(submitLead, { status: "idle" });
   const [step, setStep] = useState(1);
   const [stepError, setStepError] = useState("");
@@ -96,6 +98,7 @@ export function LeadForm({ consentText, defaultIncidentType = "", defaultState =
       <input type="hidden" name="startedAt" value={startedAt} />
       <input type="hidden" name="pageUrl" value={tracking.landingUrl ?? ""} />
       <input type="hidden" name="referrer" value={tracking.referrer ?? ""} />
+      <input type="hidden" name="context" value={context} />
       {TRACK_KEYS.map((k) => (
         <input key={k} type="hidden" name={k} value={tracking[k] ?? ""} />
       ))}

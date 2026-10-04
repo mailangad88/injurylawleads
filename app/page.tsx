@@ -80,6 +80,19 @@ export default function Home() {
         </div>
       </Reveal>
 
+      <Reveal className="mx-auto max-w-6xl px-4 pb-16">
+        <div className="flex flex-col items-start gap-6 rounded-3xl border-2 border-yellow-400 bg-yellow-50 p-8 md:flex-row md:items-center md:justify-between">
+          <div>
+            <p className="text-xs font-black uppercase tracking-[0.2em] text-amber-700">Free settlement calculator</p>
+            <h2 className="mt-2 text-2xl font-black uppercase tracking-tight text-slate-950 md:text-3xl">What could your claim be worth?</h2>
+            <p className="mt-2 max-w-xl text-slate-700">Enter your medical bills, lost wages and how serious the injury is to see an illustrative range in under a minute.</p>
+          </div>
+          <Link href="/settlement-calculator" className="lift shrink-0 rounded-xl bg-slate-950 px-7 py-4 font-black uppercase tracking-wide text-white">
+            Estimate my claim
+          </Link>
+        </div>
+      </Reveal>
+
       <section className="bg-slate-950 text-white">
         <Reveal className="mx-auto grid max-w-6xl gap-10 px-4 py-16 md:grid-cols-2 md:items-center">
           <div>
