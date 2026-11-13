@@ -53,6 +53,8 @@ Before publishing, run `npm run check:copy`. It flags AI-sounding phrasing and r
 
 Use [OpenSEO](docs/openseo-self-hosting.md) (self-hosted) to pick topics by search volume and track rankings.
 
+Claude Code picks up 11 more MCP servers from `.mcp.json` (Search Console, GA4, Google Ads, Clarity, Meta Ads, Resend, Twilio and others). Setup and credentials are in [docs/mcp-servers.md](docs/mcp-servers.md).
+
 Components you can use in any guide without importing: `<CaseReviewCTA />`, `<EstimatorCTA />`, `<KeyTakeaways>`, `<Callout type="warning">`, `<ExplainerVideo slug="..." />`.
 
 Every page ships with canonical URLs, Article and Breadcrumb JSON-LD, a sitemap and robots.txt.
